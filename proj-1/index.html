@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=2">
+
+<title>Handlebars</title>
+
+<!-- CSS libraries -->
+
+<link href="libs/jq.css" rel="stylesheet">      <!-- JQuery -->
+<link href="libs/bs.min.css" rel="stylesheet">	<!-- Bootstrap -->
+<link href="libs/leaflet.css" rel="stylesheet"> <!-- Leaflet -->
+<link href="css/custom.css" rel="stylesheet">   <!-- Custom CSS -->
+	
+</head>
+
+<body>
+
+<h1>Basic Handebars 1</h1>
+
+<ul class = "char-list"></ul>
+
+<script id="character-template" type="text/x-handlebars-template">
+    {{#each characters}}    <!-- Character context -->
+    <li class="character">
+        <h2>{{@index}} {{@first}} {{@last}} {{name}} {{this}} </h2>
+        <p>{{actor}}</p>
+        <p>{{house}}</p>
+
+        <!-- Basic if exists statement -->
+
+        {{#if location}}<p>{{location}}</p>{{/if}}
+
+        <!-- Basic if / else exists statement -->
+
+        <p>{{#if location}}{{location}}
+           {{else}}Location: unknown{{/if}}</p>
+
+        <!-- Advanced if / else exists statement -->
+
+        <p>{{#if location}}{{location}}
+           {{else if house}}{{house}}
+           {{else}}Unknown{{/if}}</p>
+        </p>
+
+        <!-- Unless Block -->
+
+        {{#unless location}}
+        <p>Whereabouts unknown</p>
+        {{/unless}}
+
+    </li>
+    {{/each}}
+</script>
+
+</body>
+
+<!-- JS Libraries -->   
+
+<script src="libs/jq.min.js"></script>			<!-- JQuery -->
+<script src="libs/jq-ui.min.js"></script>		<!-- JQuery UI -->
+<script src="libs/bs.min.js"></script>			<!-- Bootstrap -->
+<script src="libs/hb.min.js"></script>		    <!-- Handlebars -->
+<script src="libs/hc.js"></script>			    <!-- Highcharts -->
+<script src="libs/hc-exp.js"></script>			<!-- Highcharts Exporting -->
+<script src="js/index.js"></script>             <!-- Custom JS -->
+
+
+
+
+
+
+
+

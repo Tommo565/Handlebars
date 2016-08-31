@@ -1,0 +1,20 @@
+{	
+	"characters": [
+		{
+			"name": "Jon Snow",
+			"actor": "Kit Harrington",
+			"house": "Stark",
+			"location": "Castle Black"
+		}, {
+			"name": "Tyrion Lannister",
+			"actor": "Peter Dinklage",
+			"house": "Lannister",
+			"location": ""
+		}, {
+			"name": "Margery Tyrell",
+			"actor": "Natalie Dormer",
+			"house": "Tyrell",
+			"location": null
+		}
+	]
+}
